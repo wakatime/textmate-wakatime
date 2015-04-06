@@ -6,9 +6,9 @@ Fully automatic time tracking for TextMate.
 Installation
 ------------
 
-1. Download [textmate-wakatime-v1.0.0.tmplugin](https://github.com/wakatime/textmate-wakatime/releases/download/1.0.0/textmate-wakatime-v1.0.0.tmplugin)
+1. Download [textmate-wakatime-v1.0.0.tmplugin](https://github.com/wakatime/textmate-wakatime/releases/download/1.0.0/textmate-wakatime-v1.0.0.tmplugin.zip)
 
-2. Double click on the downloaded tmplugin file to install the plugin in TextMate.
+2. Unzip and open the downloaded tmplugin file to install the plugin in TextMate.
 
 3. Enter your [api key](https://wakatime.com/settings#apikey) from https://wakatime.com/settings#apikey, then click `OK`.
 
