@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
+		E665FE001AD2B02D0029A88A /* JRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = E665FDFF1AD2B02D0029A88A /* JRSwizzle.m */; };
+		E665FE031AD302070029A88A /* NSWindow+KKSwizzle.mm in Sources */ = {isa = PBXBuildFile; fileRef = E665FE021AD302070029A88A /* NSWindow+KKSwizzle.mm */; };
 		E67203131AD1E5090011FCDF /* WakaTime.mm in Sources */ = {isa = PBXBuildFile; fileRef = 177E4DA209132A0F0064163D /* WakaTime.mm */; };
 		E68C0C141AD24CBE003CB5F8 /* install_dependencies.sh in Resources */ = {isa = PBXBuildFile; fileRef = E68C0C131AD24CBE003CB5F8 /* install_dependencies.sh */; };
 /* End PBXBuildFile section */
@@ -24,6 +26,10 @@
 		8D5B49B6048680CD000E48DA /* WakaTime.tmplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WakaTime.tmplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		E665FDFE1AD2B02D0029A88A /* JRSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRSwizzle.h; sourceTree = "<group>"; };
+		E665FDFF1AD2B02D0029A88A /* JRSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRSwizzle.m; sourceTree = "<group>"; };
+		E665FE011AD302070029A88A /* NSWindow+KKSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSWindow+KKSwizzle.h"; sourceTree = "<group>"; };
+		E665FE021AD302070029A88A /* NSWindow+KKSwizzle.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "NSWindow+KKSwizzle.mm"; sourceTree = "<group>"; };
 		E68C0C131AD24CBE003CB5F8 /* install_dependencies.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = install_dependencies.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,6 +79,10 @@
 		08FB77AFFE84173DC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E665FE011AD302070029A88A /* NSWindow+KKSwizzle.h */,
+				E665FE021AD302070029A88A /* NSWindow+KKSwizzle.mm */,
+				E665FDFE1AD2B02D0029A88A /* JRSwizzle.h */,
+				E665FDFF1AD2B02D0029A88A /* JRSwizzle.m */,
 				177E4DA209132A0F0064163D /* WakaTime.mm */,
 				177E4DA109132A0F0064163D /* WakaTime.h */,
 			);
@@ -191,7 +201,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E665FE001AD2B02D0029A88A /* JRSwizzle.m in Sources */,
 				E67203131AD1E5090011FCDF /* WakaTime.mm in Sources */,
+				E665FE031AD302070029A88A /* NSWindow+KKSwizzle.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,7 +224,7 @@
 		1DEB913B08733D840010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -231,7 +243,7 @@
 		1DEB913C08733D840010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

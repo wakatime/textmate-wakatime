@@ -3,14 +3,11 @@
 //
 //
 
-#import <Cocoa/Cocoa.h>
-
 @protocol TMPlugInController
 - (float)version;
 @end
 
-@interface WakaTime : NSObject
-{
+@interface WakaTime : NSObject {
     NSMutableDictionary* _windows;
     NSString *_lastFile;
     CFAbsoluteTime _lastTime;
@@ -21,9 +18,4 @@
 + (void)setFileForWindow:(NSString *)filePath forWindow:(int)windowNumber;
 + (NSString*)getFileForWindow:(int)windowNumber;
 + (int)totalWindows;
-@end
-
-@interface NSWindowPoser : NSWindow
-{
-}
 @end

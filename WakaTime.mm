@@ -4,6 +4,7 @@
 //
 
 #import "WakaTime.h"
+#import "NSWindow+KKSwizzle.h"
 
 static NSString *VERSION = @"1.0.0";
 static NSString *TEXTMATE_VERSION = nil;
@@ -13,40 +14,6 @@ static NSString *WAKATIME_CLI = @"Library/Application Support/TextMate/PlugIns/W
 static NSString *CONFIG_FILE = @".wakatime.cfg";
 static int FREQUENCY = 2;  // minutes
 
-@implementation NSWindowPoser
-
-// called when the user switches tabs (or load files)
-- (void)setRepresentedFilename:(NSString*)aPath {
-    [WakaTime setFileForWindow:aPath forWindow:self.windowNumber];
-    NSString *file = [WakaTime getFileForWindow:self.windowNumber];
-    [WakaTime handleEditorAction:file isWrite:false];
-    [super setRepresentedFilename:aPath];
-}
-
-// called when a window is focused
-- (void)becomeMainWindow {
-    NSString *file = [WakaTime getFileForWindow:self.windowNumber];
-    [WakaTime handleEditorAction:file isWrite:false];
-    [super becomeMainWindow];
-}
-
-// called when a key is pressed
-- (void)sendEvent:(NSEvent *)event {
-    if (event.type == NSKeyDown) {
-        NSString *file = [WakaTime getFileForWindow:self.windowNumber];
-        [WakaTime handleEditorAction:file isWrite:false];
-    }
-    [super sendEvent:event];
-}
-
-// called when a document change state (e.g. when saved to disk)
-- (void)setDocumentEdited:(BOOL)flag {
-    NSString *file = [WakaTime getFileForWindow:self.windowNumber];
-    bool isWrite = !flag;
-    [WakaTime handleEditorAction:file isWrite:isWrite];
-    [super setDocumentEdited:flag];
-}
-@end
 
 @implementation WakaTime
 
@@ -66,7 +33,7 @@ static CFAbsoluteTime _lastTime;
 
     NSApp = [NSApplication sharedApplication];
     if(self = [super init]) {
-        NSLog(@"Initializing WakaTime plugin");
+        NSLog(@"Initializing WakaTime plugin v%@ (http://wakatime.com)", VERSION);
         
         // Set runtime constants
         CONFIG_FILE = [NSHomeDirectory() stringByAppendingPathComponent:CONFIG_FILE];
@@ -85,8 +52,6 @@ static CFAbsoluteTime _lastTime;
             [self promptForApiKey];
         }
         
-        // Listen for activity in editor
-        [NSWindowPoser poseAsClass:[NSWindow class]];
     }
     
     return self;
