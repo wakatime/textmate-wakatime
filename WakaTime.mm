@@ -61,7 +61,7 @@ static CFAbsoluteTime _lastTime;
     NSLog(@"Installing wakatime cli...");
     NSString *script = [NSHomeDirectory() stringByAppendingPathComponent:WAKATIME_INSTALL_SCRIPT];
     NSTask *task = [[NSTask alloc] init];
-    [task setLaunchPath: @"/usr/local/bin/bash"];
+    [task setLaunchPath: @"/bin/bash"];
     NSMutableArray *arguments = [NSMutableArray array];
     [arguments addObject:script];
     [task setArguments: arguments];
