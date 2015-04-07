@@ -6,7 +6,7 @@
 #import "WakaTime.h"
 #import "NSWindow+KKSwizzle.h"
 
-static NSString *VERSION = @"1.0.1";
+static NSString *VERSION = @"1.0.2";
 static NSString *TEXTMATE_VERSION = nil;
 static NSString *TEXTMATE_BUILD = nil;
 static NSString *WAKATIME_INSTALL_SCRIPT = @"Library/Application Support/TextMate/PlugIns/WakaTime.tmplugin/Contents/Resources/install_dependencies.sh";
