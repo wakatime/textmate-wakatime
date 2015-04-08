@@ -4,6 +4,7 @@
 //
 
 #import "JRSwizzle.h"
+#import "NSWindow+KKSwizzle.h"
 #import "WakaTime.h"
 
 
