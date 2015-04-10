@@ -10,7 +10,7 @@ Installation
 
 2. Unzip and open the downloaded tmplugin file to install the plugin in TextMate.
 
-3. Enter your [api key](https://wakatime.com/settings#apikey), then click `OK`.
+3. Enter your [api key](https://wakatime.com/settings#apikey), then click `OK`. (Use two-finger click to paste)
 
 4. Use TextMate like you normally do and your time will be tracked for you automatically.
 
