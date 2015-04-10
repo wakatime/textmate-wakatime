@@ -1,7 +1,7 @@
 textmate-wakatime
 =================
 
-Fully automatic time tracking for TextMate.
+Fully automatic time tracking for TextMate 1 & 2.
 
 Installation
 ------------
