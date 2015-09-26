@@ -20,3 +20,17 @@ Screen Shots
 ------------
 
 ![Project Overview](https://wakatime.com/static/img/ScreenShots/ScreenShot-2014-10-29.png)
+
+
+Configuring
+-----------
+
+WakaTime plugins share a common config file `.wakatime.cfg` located in your user home directory with [these options](https://github.com/wakatime/wakatime#configuring) available.
+
+
+Troubleshooting
+---------------
+
+[Enable logging](https://github.com/textmate/textmate/wiki/Enable-Logging) then run TextMate from Terminal to see any error messages.
+
+For general troubleshooting information, see [wakatime/wakatime#troubleshooting](https://github.com/wakatime/wakatime#troubleshooting).
