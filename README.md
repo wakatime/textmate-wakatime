@@ -31,6 +31,16 @@ WakaTime plugins share a common config file `.wakatime.cfg` located in your user
 Troubleshooting
 ---------------
 
-[Enable logging](https://github.com/textmate/textmate/wiki/Enable-Logging) then run TextMate from Terminal to see any error messages.
+Try running this Terminal command:
 
-For general troubleshooting information, see [wakatime/wakatime#troubleshooting](https://github.com/wakatime/wakatime#troubleshooting).
+```
+curl -fsSL https://raw.githubusercontent.com/wakatime/textmate-wakatime/master/install_dependencies.sh | sh
+```
+
+That will re-download the [wakatime-cli dependency](https://github.com/wakatime/wakatime).
+
+If that doesn't work, turn on debug mode and check your wakatime cli log file (`~/.wakatime.log`).
+
+If there are no errors in your `~/.wakatime.log` file, [Enable logging](https://github.com/textmate/textmate/wiki/Enable-Logging) then run TextMate from Terminal to see any error messages.
+
+For more general troubleshooting information, see [wakatime/wakatime#troubleshooting](https://github.com/wakatime/wakatime#troubleshooting).
