@@ -3,6 +3,12 @@ History
 -------
 
 
+1.0.3 (2021-11-14)
+++++++++++++++++++
+
+- Fix wakatime-cli location after GitHub repo renamed.
+
+
 1.0.2 (2015-04-07)
 ++++++++++++++++++
 
