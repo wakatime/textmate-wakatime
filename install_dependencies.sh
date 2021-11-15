@@ -13,8 +13,8 @@ set -x
 
 url="https://codeload.github.com/wakatime/wakatime/zip/master"
 extract_to="$HOME/Library/Application Support/TextMate/PlugIns/WakaTime.tmplugin/Contents/Resources"
-zip_file="$extract_to/wakatime.zip"
-installed_package="$extract_to/wakatime-master"
+zip_file="$extract_to/legacy-python-cli-master.zip"
+installed_package="$extract_to/legacy-python-cli-master"
 
 if [ -d "$installed_package" ]; then
     rm -rf "$installed_package"
@@ -22,10 +22,10 @@ fi
 
 cd "$extract_to"
 
-echo "Downloading wakatime package to $zip_file ..."
+echo "Downloading wakatime-cli package to $zip_file ..."
 curl "$url" -o "$zip_file"
 
-echo "Unzipping wakatime.zip to $installed_package ..."
+echo "Unzipping wakatime-cli to $installed_package ..."
 unzip -o "$zip_file"
 
 rm "$zip_file"
