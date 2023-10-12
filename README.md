@@ -1,12 +1,10 @@
-textmate-wakatime
-=================
+# textmate-wakatime
 
 Quantify your coding inside TextMate 1 & 2.
 
-Installation
-------------
+## Installation
 
-1. Download [textmate-wakatime-v1.0.2.tmplugin](https://github.com/wakatime/textmate-wakatime/releases/download/1.0.2/textmate-wakatime-v1.0.2.tmplugin.zip)
+1. Download [textmate-wakatime-v1.0.3.tmplugin](https://github.com/wakatime/textmate-wakatime/releases/download/1.0.3/textmate-wakatime-v1.0.3.tmplugin.zip)
 
 2. Unzip and open the downloaded tmplugin file to install the plugin in TextMate.
 
@@ -16,20 +14,15 @@ Installation
 
 5. Visit https://wakatime.com to see your logged time.
 
-Screen Shots
-------------
+## Screen Shots
 
 ![Project Overview](https://wakatime.com/static/img/ScreenShots/ScreenShot-2014-10-29.png)
 
-
-Configuring
------------
+## Configuring
 
 WakaTime plugins share a common config file `.wakatime.cfg` located in your user home directory with [these options](https://github.com/wakatime/wakatime#configuring) available.
 
-
-Troubleshooting
----------------
+## Troubleshooting
 
 Try running this Terminal command:
 
@@ -39,8 +32,8 @@ curl -fsSL https://raw.githubusercontent.com/wakatime/textmate-wakatime/master/i
 
 That will re-download the [wakatime-cli dependency](https://github.com/wakatime/wakatime).
 
-If that doesn't work, turn on debug mode and check your wakatime cli log file (`~/.wakatime.log`).
+If that doesn't work, turn on debug mode and check your wakatime cli log file (`~/.wakatime/wakatime.log`).
 
-If there are no errors in your `~/.wakatime.log` file, [Enable logging](https://github.com/textmate/textmate/wiki/Enable-Logging) then run TextMate from Terminal to see any error messages.
+If there are no errors in your `~/.wakatime/wakatime.log` file, [Enable logging](https://github.com/textmate/textmate/wiki/Enable-Logging) then run TextMate from Terminal to see any error messages.
 
 For more general troubleshooting information, see [wakatime/wakatime#troubleshooting](https://github.com/wakatime/wakatime#troubleshooting).
